@@ -1,0 +1,25 @@
+<template>
+  <div>
+    <div class="row pt-2">
+      <div class="col-lg-12">
+        <b-table bordered hover :items="items" />
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'ListarActividades',
+  data: function () {
+    return {
+      items: [
+        { isActive: true, age: 40, first_name: 'Dickerson', last_name: 'Macdonald' },
+        { isActive: false, age: 21, first_name: 'Larsen', last_name: 'Shaw' },
+        { isActive: false, age: 89, first_name: 'Geneva', last_name: 'Wilson' },
+        { isActive: true, age: 38, first_name: 'Jami', last_name: 'Carney' }
+      ]
+    }
+  }
+}
+</script>
