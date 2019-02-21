@@ -5,7 +5,7 @@
         <b-form-input v-model="txtActividad" type="text" placeholder="Ingresar descripcion de la actividad" />
       </div>
       <div class="col-lg-4">
-        <b-button variant="primary">Crear Actividad</b-button>
+        <b-button variant="primary" v-on:click=test>Crear Actividad</b-button>
       </div>
     </div>
   </div>
@@ -17,6 +17,11 @@ export default {
   data: function () {
     return {
       txtActividad: ''
+    }
+  },
+  methods: {
+    test: function () {
+      this.$store.commit('test', { usuario: 'Usuario Cambio' })
     }
   }
 }

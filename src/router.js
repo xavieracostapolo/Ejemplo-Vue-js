@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Home from './views/Home.vue'
 import Actividad from './components/actividades/Actividad.vue'
 import Tiempos from './components/tiempos/Tiempos.vue'
+import NotFoundView from './views/NotFoundView.vue'
 import Test from './components/Test.vue'
 
 Vue.use(Router)
@@ -14,6 +15,10 @@ export default new Router({
       path: '/',
       name: 'home',
       component: Home
+    },
+    {
+      path: '*',
+      component: NotFoundView
     },
     {
       path: '/about',
