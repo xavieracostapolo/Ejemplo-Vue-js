@@ -5,13 +5,15 @@
         <b-form-input v-model="txtActividad" type="text" placeholder="Ingresar descripcion de la actividad" />
       </div>
       <div class="col-lg-4">
-        <b-button variant="primary" v-on:click=test>Crear Actividad</b-button>
+        <b-button variant="primary" v-on:click=modificar>Crear Actividad</b-button>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import { mapActions } from 'vuex'
+
 export default {
   name: 'CrearACtividad',
   data: function () {
@@ -20,9 +22,10 @@ export default {
     }
   },
   methods: {
-    test: function () {
-      this.$store.commit('test', { usuario: 'Usuario Cambio' })
-    }
+    modificar () {
+      this.$store.dispatch('modificarUsuario', this.txtActividad)
+    },
+    ...mapActions(['modificarUsuario'])
   }
 }
 </script>

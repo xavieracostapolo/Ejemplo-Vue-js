@@ -11,7 +11,7 @@
         <b-nav-item :to="{ name: 'actividad' }">Actividades</b-nav-item>
         <b-nav-item :to="{ name: 'tiempos' }">Tiempos</b-nav-item>
         <b-nav-item :to="{ name: 'test' }">Test</b-nav-item>
-        <b-nav-item href="#" disabled>{{ this.$store.state.usuario.nombre }}</b-nav-item>
+        <b-nav-item href="#" disabled>{{ usuario }}</b-nav-item>
       </b-navbar-nav>
 
       <!-- Right aligned nav items -->
@@ -42,10 +42,12 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mapGetters } from 'vuex'
 
 export default {
   name: 'Header',
-  computed: mapState(['usuario'])
+  computed: {
+    ...mapGetters(['usuario'])
+  }
 }
 </script>
