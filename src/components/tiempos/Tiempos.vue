@@ -1,8 +1,10 @@
 <template>
   <div>
-    <h1>Tiempos</h1>
-    <crear-tiempo />
-    <listar-tiempo />
+    <b-card header-tag="header" footer-tag="footer" header-bg-variant="info" header-text-variant="white">
+      <h6 slot="header" class="mb-0">Tiempos.</h6>
+      <crear-tiempo/>
+      <listar-tiempo/>
+    </b-card>
   </div>
 </template>
 

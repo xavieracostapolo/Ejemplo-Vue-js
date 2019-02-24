@@ -35,9 +35,10 @@ export default new Router({
       props: true
     },
     {
-      path: '/tiempos',
+      path: '/tiempos/:id?',
       name: 'tiempos',
-      component: Tiempos
+      component: Tiempos,
+      props: true
     },
     {
       path: '/test',

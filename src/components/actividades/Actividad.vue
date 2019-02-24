@@ -15,14 +15,11 @@ import ListarActividades from './ListarActividades'
 export default {
   name: 'Actividad',
   props: {
-    actividadId: {
-      type: Number,
-      default: 10000
-    }
+
   },
   data: function () {
     return {
-      Id: this.$route.params.id
+
     }
   },
   components: {
